@@ -1,0 +1,155 @@
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.box{
+    position: absolute;
+    width: 25rem;
+    border: 1px solid grey;
+    border-radius: 1rem;
+    background-color: rgb(245, 243, 243);
+    left: 10%;
+    top: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:center;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+table {
+    position: absolute;
+    left: 80%;
+    background-color: rgb(245, 243, 243);
+}
+
+.delete {
+    top: 25rem;
+}
+
+.horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.large {
+    height: 15rem;
+    top: 25%;
+    left: 35%;
+}
+
+.small {
+    height: 11rem;
+    margin-bottom: 2rem;
+}
+
+.small button {
+    position: absolute;
+    top: 10rem !important;
+}
+
+.box h1{
+    position: absolute;
+    top: 2rem;
+    font-family: cursive;
+    font-size: 2rem;
+    background-color: rgb(245, 243, 243) ;
+    margin-bottom: 1rem;
+}
+
+.input1{
+    position: absolute;
+    top: 6rem;
+    width: 81%;
+    left: 5%;
+    height: 3rem;
+    font-family: cursive;
+    font-size: large;
+    border-radius: 1rem;
+    border: none;
+    background-color: white;
+    padding-left: 2rem; 
+    margin: 2rem;
+}
+
+.input2{
+    position: absolute;
+    top: 10rem;
+    width: 81%;
+    left: 5%;
+    height: 3rem;
+    font-family: cursive;
+    font-size: large;
+    border-radius: 1rem;
+    border: none;
+    background-color: white;
+    padding-left: 2rem;
+}
+
+.box button{
+    position: absolute;
+    top: 14rem;
+    width: 7rem;
+    height: 2.5rem;
+    font-size: large;
+    border: none;
+    background-color: rgb(103, 103, 235);
+    /* left: 16.5rem; */
+    border-radius: 0.25rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+.box button:hover{
+    background-color: rgb(103, 103, 235);
+    cursor: pointer;
+}
+
+input {
+    padding: 2px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(24, 25, 37);
+}
+
+.form > * {
+    margin: 5px 0px;
+}
+
+.tasks {
+    position: absolute;
+    left: 65%;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2cm 0cm;
+}
+
+table > * > tr > th {
+  font-weight:bold;
+  padding: 10px;
+}
+
+th {
+  padding: 2px 15px;
+  font-size: 25px;
+  border-bottom: 3px solid black;
+}
+
+
+.checkbox {
+    width: 30px;
+    height: 10px;
+    background-color: rgb(1, 255, 1);
+}
