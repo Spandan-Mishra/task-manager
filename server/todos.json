@@ -1,0 +1,38 @@
+{
+  "database": [
+    {
+      "username": "guds",
+      "id": 1,
+      "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+      "todos": []
+    },
+    {
+      "username": "xyz",
+      "id": 2,
+      "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+      "todos": []
+    },
+    {
+      "username": "spandan",
+      "id": 3,
+      "password": "688787d8ff144c502c7f5cffaafe2cc588d86079f9de88304c26b0cb99ce91c6",
+      "todos": [
+        {
+          "id": 1,
+          "todo": "complete todo manager",
+          "status": true
+        },
+        {
+          "id": 2,
+          "todo": "make video",
+          "status": true
+        },
+        {
+          "id": 3,
+          "todo": "post on x",
+          "status": false
+        }
+      ]
+    }
+  ]
+}
