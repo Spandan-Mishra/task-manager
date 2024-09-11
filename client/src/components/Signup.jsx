@@ -5,7 +5,7 @@ const Signup = () => {
     const [password, setPassword] = useState("");
 
     return (
-        <div className="box large">
+        <div className="box large single-day-regular">
             <h1>Signup</h1>
             <div className="form">
                 <input 

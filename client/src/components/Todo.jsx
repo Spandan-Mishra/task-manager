@@ -39,7 +39,7 @@ const Todo = () => {
     }, [])
 
     return (
-        <div className="center">
+        <div className="center single-day-regular">
             {error ? (
                 <h2>{error}</h2>
             ) : (

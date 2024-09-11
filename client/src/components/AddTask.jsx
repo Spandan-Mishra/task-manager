@@ -38,7 +38,7 @@ const AddTask = ({ onAddTask }) => {
     }
 
     return (
-        <form className="box small" onSubmit={handleSubmit}>
+        <form className="box small single-day-regular" onSubmit={handleSubmit}>
             <h2 >Add Tasks here!</h2>
             <div className="form">
                 <input 

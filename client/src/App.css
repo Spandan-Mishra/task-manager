@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Single+Day&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Belgrano&display=swap");
+
+.single-day-regular {
+  font-family: "Single Day", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 .form {
     display: flex;
     justify-content: center;
@@ -11,7 +21,7 @@
     width: 25rem;
     border: 1px solid grey;
     border-radius: 1rem;
-    background-color: rgb(245, 243, 243);
+    background-color: #0b0a2f;
     left: 10%;
     top: 7rem;
     display: flex;
@@ -25,7 +35,7 @@
 table {
     position: absolute;
     left: 80%;
-    background-color: rgb(245, 243, 243);
+    background-color: rgb(0, 23, 99);
 }
 
 .delete {
@@ -61,8 +71,11 @@ table {
     top: 2rem;
     font-family: cursive;
     font-size: 2rem;
-    background-color: rgb(245, 243, 243) ;
+    background-color: #0b0a2f;
     margin-bottom: 1rem;
+    font-family: "Belgrano", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .input1{
@@ -75,9 +88,10 @@ table {
     font-size: large;
     border-radius: 1rem;
     border: none;
-    background-color: white;
+    background-color: rgb(23, 23, 23);
     padding-left: 2rem; 
     margin: 2rem;
+    color: white;
 }
 
 .input2{
@@ -90,8 +104,9 @@ table {
     font-size: large;
     border-radius: 1rem;
     border: none;
-    background-color: white;
+    background-color: rgb(23, 23, 23);
     padding-left: 2rem;
+    color: white;
 }
 
 .box button{
@@ -101,7 +116,7 @@ table {
     height: 2.5rem;
     font-size: large;
     border: none;
-    background-color: rgb(103, 103, 235);
+    background-color: #03346E;
     /* left: 16.5rem; */
     border-radius: 0.25rem;
     color: white;
@@ -109,7 +124,7 @@ table {
 }
 
 .box button:hover{
-    background-color: rgb(103, 103, 235);
+    background-color: #0e6fb9;
     cursor: pointer;
 }
 
