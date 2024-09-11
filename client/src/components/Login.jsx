@@ -3,9 +3,11 @@ import { useState } from "react";
 const Login = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
 
     return (
         <div className="box large single-day-regular">
+            <p>{error}</p>
             <h1>Login</h1>
             <div className="form">
                 <input 
@@ -41,9 +43,11 @@ const Login = () => {
                         if(response.ok) {
                             console.log(json.client);
                             localStorage.setItem("token", json.token);
+                            setError('');
                             window.location.href = "/todo";
                         } else {
                             console.log(json);
+                            setError(json.msg)
                         }
                         
                     }}

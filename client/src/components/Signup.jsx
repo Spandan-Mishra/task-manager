@@ -3,9 +3,11 @@ import { useState } from "react";
 const Signup = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
 
     return (
         <div className="box large single-day-regular">
+            <p>{error}</p>
             <h1>Signup</h1>
             <div className="form">
                 <input 
@@ -26,7 +28,6 @@ const Signup = () => {
                     type="submit"
                     id="submit"
                     onClick={async () => {
-                        console.log(username, password);
                         const response = await fetch('http://localhost:3000/signup', {
                             method: "POST",
                             headers: {
@@ -40,11 +41,16 @@ const Signup = () => {
 
                         const json = await response.json();
                         console.log(json);
-                        window.location.href = "/login"
+                        if(response.ok) {
+                            setError('');
+                            window.location.href = "/login"
+                        } else {
+                            setError(json.msg);
+                        }
                     }}
                 >
                     Signup
-                </button>
+                </button> 
             </div>
         </div>
         

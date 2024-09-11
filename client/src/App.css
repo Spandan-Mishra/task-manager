@@ -36,10 +36,12 @@ table {
     position: absolute;
     left: 80%;
     background-color: rgb(0, 23, 99);
+    border: solid 1px gray;
+    border-radius: 1rem;
 }
 
 .delete {
-    top: 25rem;
+    width: 30px;
 }
 
 .horizontal {
@@ -57,6 +59,7 @@ table {
 }
 
 .small {
+    top: 13rem;
     height: 11rem;
     margin-bottom: 2rem;
 }
@@ -116,7 +119,7 @@ table {
     height: 2.5rem;
     font-size: large;
     border: none;
-    background-color: #03346E;
+    background-color: #2E236C;
     /* left: 16.5rem; */
     border-radius: 0.25rem;
     color: white;
@@ -124,7 +127,7 @@ table {
 }
 
 .box button:hover{
-    background-color: #0e6fb9;
+    background-color: #1f0e52;
     cursor: pointer;
 }
 
@@ -159,12 +162,24 @@ table > * > tr > th {
 th {
   padding: 2px 15px;
   font-size: 25px;
-  border-bottom: 3px solid black;
+  /* border-bottom: 1px solid grey; */
 }
 
-
 .checkbox {
-    width: 30px;
-    height: 10px;
-    background-color: rgb(1, 255, 1);
+    width: 20px;
+    height: 20px;
+    accent-color: rgb(0, 172, 0);
+}
+
+.todo-content {
+    white-space: nowrap;
+}
+
+p {
+    margin-top: 185px;
+    color: red;
+    font-size: 15px;
+    font-family: "Single Day", cursive;
+    font-weight: 400;
+    font-style: normal;
 }

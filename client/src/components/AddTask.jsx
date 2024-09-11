@@ -4,12 +4,13 @@ import "../App.css"
 
 const AddTask = ({ onAddTask }) => {
     const [todo, setTodo] = useState("")
+    const [error, setError] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         const token = localStorage.getItem("token");
         if(!token) {
-            console.log("Login required!");
+            setError("Login required!");
             return ;
         }
         try {
@@ -25,7 +26,7 @@ const AddTask = ({ onAddTask }) => {
             });
 
             if(!response.ok) {
-                console.log("Authorization failed");
+                setError("Authorization failed");
                 return ;
             }
 
@@ -38,8 +39,9 @@ const AddTask = ({ onAddTask }) => {
     }
 
     return (
-        <form className="box small single-day-regular" onSubmit={handleSubmit}>
+        <form className="box small single-day-regular" onSubmit={handleSubmit}> 
             <h2 >Add Tasks here!</h2>
+            <p>{error}</p>
             <div className="form">
                 <input 
                     type="text" 

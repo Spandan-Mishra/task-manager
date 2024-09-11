@@ -38,7 +38,47 @@
       "username": "spand",
       "id": 4,
       "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-      "todos": []
+      "todos": [
+        {
+          "id": 1,
+          "todo": "dsngfkjdsngj",
+          "status": false
+        },
+        {
+          "id": 2,
+          "todo": "sdnjfsdngj",
+          "status": false
+        },
+        {
+          "id": 3,
+          "todo": "sdnfksdngsdgnk",
+          "status": false
+        }
+      ]
+    },
+    {
+      "username": "root",
+      "id": 5,
+      "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+      "todos": [
+        {
+          "id": 1,
+          "todo": "complete todo",
+          "status": false
+        }
+      ]
+    },
+    {
+      "username": "root1",
+      "id": 6,
+      "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+      "todos": [
+        {
+          "id": 1,
+          "todo": "complete react task",
+          "status": false
+        }
+      ]
     }
   ]
 }

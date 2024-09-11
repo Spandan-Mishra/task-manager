@@ -193,7 +193,7 @@ app.delete('/todo', auth, (req, res) => {
 
     fs.readFile(filePath, 'utf-8', (err, data) => {
         if(err) {
-            return res.status(400).json({msg: "Error occured"});
+            return res.status(401).json({msg: "Error occured"});
         }
 
         const todos = JSON.parse(data);

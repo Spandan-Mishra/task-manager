@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import AddTask from "./AddTask";
-import DeleteTask from "./DeleteTask";
 import "../App.css";
+import deleteIcon from '../assets/delete-icon.png'
 
 const Todo = () => {
     const [todos, setTodos] = useState([]);
@@ -34,6 +34,36 @@ const Todo = () => {
         }
     }
     
+    const handleDelete = async (id) => {
+        const token = localStorage.getItem("token");
+        if(!token) {
+            console.log("Login required!");
+            return ;
+        }
+        try {
+            const response = await fetch('http://localhost:3000/todo', {
+                method: "DELETE",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': token
+                },
+                body: JSON.stringify({
+                    id: id
+                })
+            });
+
+            if(!response.ok) {
+                console.log("Authorization failed");
+                return ;
+            }
+
+            fetchData();
+        } catch(error) {
+            console.log(error.message);
+        }
+
+    }
+
     useEffect(() => {
         fetchData();
     }, [])
@@ -52,13 +82,14 @@ const Todo = () => {
                                             <th>Id</th>
                                             <th>Task</th>
                                             <th>Status</th>
+                                            <th>Delete</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {todos.map((todo, index) => (
                                             <tr key={index}>
                                                 <th>{todo.id}</th>
-                                                <th>{todo.todo}</th>
+                                                <th className="todo-content">{todo.todo}</th>
                                                 <th><input 
                                                     type="checkbox" 
                                                     checked={todo.status}
@@ -78,6 +109,9 @@ const Todo = () => {
                                                     }}
                                                     />
                                                 </th>
+                                                <th >
+                                                    <img  onClick={() => handleDelete(todo.id)} className="delete" src={deleteIcon}></img>
+                                                </th>
                                             </tr>
                                         ))}
                                     </tbody>
@@ -89,7 +123,6 @@ const Todo = () => {
                     )}     
                     <div className="horizontal">       
                         <AddTask onAddTask={fetchData}/>
-                        <DeleteTask onDelete={fetchData}/>
                     </div>
                 </>
         )}

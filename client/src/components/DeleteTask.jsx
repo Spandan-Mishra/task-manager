@@ -38,7 +38,7 @@ const DeleteTask = ({ onDelete }) => {
     }
 
     return (
-        <form className="box small delete single-day-regular" onSubmit={handleSubmit}>
+        <form className="box small delete " onSubmit={handleSubmit}>
             <h2 >Delete Tasks here!</h2>
             <div className="form">
                 <input 
