@@ -2,7 +2,7 @@ import { useState } from "react";
 import PropTypes from 'prop-types';
 import "../App.css"
 
-const AddTask = ({ onAddTask }) => {
+const AddTask = ({ onAddTask, apiUrl }) => {
     const [todo, setTodo] = useState("")
     const [error, setError] = useState("");
 
@@ -14,7 +14,7 @@ const AddTask = ({ onAddTask }) => {
             return ;
         }
         try {
-            const response = await fetch('http://localhost:3000/todo', {
+            const response = await fetch(`${apiUrl}/todo`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',

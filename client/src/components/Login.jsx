@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Login = () => {
+const Login = ({ apiUrl }) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
@@ -28,7 +28,7 @@ const Login = () => {
                     type="submit"
                     id="submit"
                     onClick={async () => {
-                        const response = await fetch('http://localhost:3000/login', {
+                        const response = await fetch(`${apiUrl}/login`, {
                             method: "POST",
                             headers: {
                                 'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ const Login = () => {
                             console.log(json.client);
                             localStorage.setItem("token", json.token);
                             setError('');
-                            window.location.href = "/todo";
+                            window.location.href = `${apiUrl}/todo`;
                         } else {
                             console.log(json);
                             setError(json.msg)
