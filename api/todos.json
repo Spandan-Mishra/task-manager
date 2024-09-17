@@ -63,43 +63,25 @@
       "todos": [
         {
           "id": 1,
-          "todo": "complete todo",
-          "status": false
-        },
-        {
-          "id": 2,
           "todo": "post on X",
           "status": false
         },
         {
-          "id": 3,
+          "id": 2,
           "todo": "complete backlogs",
           "status": false
         },
         {
-          "id": 4,
+          "id": 3,
           "todo": "finish assignment",
           "status": false
-        }
-      ]
-    },
-    {
-      "username": "root1",
-      "id": 6,
-      "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-      "todos": [
+        },
         {
-          "id": 1,
-          "todo": "complete react task",
+          "id": 4,
+          "todo": "done",
           "status": false
         }
       ]
-    },
-    {
-      "username": "root ",
-      "id": 7,
-      "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-      "todos": []
     }
   ]
 }

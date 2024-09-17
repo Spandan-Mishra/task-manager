@@ -3,7 +3,7 @@ import AddTask from "./AddTask";
 import "../App.css";
 import deleteIcon from '../assets/delete-icon.png'
 
-const Todo = ({ apiUrl }) => {
+const Todo = () => {
     const [todos, setTodos] = useState([]);
     const [error, setError] = useState("");
 
@@ -14,7 +14,7 @@ const Todo = ({ apiUrl }) => {
             return ;
         }
         try {
-            const response = await fetch(`${apiUrl}/todo`, {
+            const response = await fetch(`http://localhost:3000/todo`, {
                 method: "GET",
                 headers: {
                     'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const Todo = ({ apiUrl }) => {
             return ;
         }
         try {
-            const response = await fetch(`${apiUrl}/todo`, {
+            const response = await fetch(`http://localhost:3000/todo`, {
                 method: "DELETE",
                 headers: {
                     'Content-Type': 'application/json',
@@ -95,7 +95,7 @@ const Todo = ({ apiUrl }) => {
                                                     checked={todo.status}
                                                     className="checkbox"
                                                     onChange={async () => {
-                                                        await fetch(`${apiUrl}/todo`,{
+                                                        await fetch(`http://localhost:3000/todo`,{
                                                             method: "PUT",
                                                             headers: {
                                                                 'Content-Type': 'application/json',
@@ -122,7 +122,7 @@ const Todo = ({ apiUrl }) => {
                         <h2 style={{ paddingLeft: "65%", paddingTop: "15%" }}>Add Tasks!</h2>
                     )}     
                     <div className="horizontal">       
-                        <AddTask onAddTask={fetchData} apiUrl={apiUrl}/>
+                        <AddTask onAddTask={fetchData}/>
                     </div>
                 </>
         )}

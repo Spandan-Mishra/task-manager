@@ -6,13 +6,12 @@ const PORT = 3000;
 var jwt = require("jsonwebtoken");
 const { auth } = require("./middleware");
 var sha256 = require('js-sha256');
-const JWT_SECRET = "secret";
+require('dotenv').config({ path: '../.env' });
+const JWT_SECRET = process.env.JWT_SECRET;
 const bodyParser = require("body-parser");
-var jsonParser = bodyParser.json();
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+app.use(express.json());
 const cors = require("cors");
 app.use(cors());
-app.use(jsonParser);
 let currentUser = "";
 
 app.post('/signup', (req, res) => {
