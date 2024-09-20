@@ -14,7 +14,22 @@ const { UserModel, TodoModel, MONGO_LINK } = require('./db');
 
 const userSchema = z.object({
   email: z.string().min(10).max(30).email(),
-  password: z.string().min(8).max(30)
+  password: z.
+            string()
+            .min(8)
+            .max(30)
+            .refine(
+              (value) => {
+                const hasNumber = /\d/.test(value);
+                const hasLetter = /[a-zA-Z]/.test(value);
+                const hasSpecialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(value);
+            
+                return hasNumber && hasLetter && hasSpecialChar;
+              }, 
+              {
+                message: "Password must atleast have a letter, a number and a special character"
+              }
+            )
 })
 
 mongoose.connect(MONGO_LINK);
@@ -143,6 +158,7 @@ app.delete('/todo', auth, async (req, res) => {
       const todoId = req.body.todoId;
 
       await TodoModel.findByIdAndDelete(todoId);
+      
       res.status(200).json({
         message: "Todo successfully deleted"
       })
