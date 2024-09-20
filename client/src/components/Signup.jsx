@@ -43,7 +43,7 @@ const Signup = () => {
                         console.log(json);
                         if(response.ok) {
                             setError('');
-                            window.location.href = `http://localhost:5173/todo`
+                            window.location.href = `http://localhost:5173/login`
                         } else {
                             setError(json.msg);
                         }
