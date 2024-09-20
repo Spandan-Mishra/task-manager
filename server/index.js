@@ -10,14 +10,14 @@ const cors = require("cors");
 app.use(cors());
 const { z } = require('zod');
 const mongoose = require('mongoose');
-const { UserModel, TodoModel } = require('./db');
+const { UserModel, TodoModel, MONGO_LINK } = require('./db');
 
 const userSchema = z.object({
   email: z.string().min(10).max(30).email(),
   password: z.string().min(8).max(30)
 })
 
-mongoose.connect("mongodb+srv://spandanmishra69:iSJ2F4bBCxv6nhTN@cluster0.nridz.mongodb.net/todo-app-database");
+mongoose.connect(MONGO_LINK);
 
 app.post('/signup', async (req, res) => {
   try{
